@@ -97,10 +97,10 @@
     "testEnvironment": "node",
     "coverageThreshold": {
       "global": {
-        "statements": 0,
-        "branches": 0,
-        "functions": 0,
-        "lines": 0
+        "statements": 32.31,
+        "branches": 43.75,
+        "functions": 36.2,
+        "lines": 32.06
       }
     }
   },
