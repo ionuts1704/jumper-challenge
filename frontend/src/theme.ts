@@ -9,12 +9,22 @@ const roboto = Roboto({
 });
 
 const theme = createTheme({
+  palette: {
+    mode: 'dark',
+    primary: {
+      main: '#9333ea', // Purple for the button
+    },
+    background: {
+      paper: 'rgba(46, 16, 101, 0.8)', // Semi-transparent purple for paper elements
+    },
+  },
   typography: {
     fontFamily: roboto.style.fontFamily,
     h1: {
       fontSize: '2rem',
-    }
+    },
   },
+  components: {},
 });
 
 export default theme;

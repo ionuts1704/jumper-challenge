@@ -1,10 +1,17 @@
-import { Box, Typography } from "@mui/material";
-import Image from "next/image";
+'use client';
+
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import useAuth from '@/context/AuthContext';
+import { paths } from '@/config/paths';
 
 export default function Home() {
-  return (
-    <Box display="flex" justifyContent="center">
-      <Typography variant="h1">Welcome to Jumper challenge!</Typography>
-    </Box>
-  );
+  const router = useRouter();
+  const { isAuthenticated } = useAuth();
+
+  useEffect(() => {
+    router.push(isAuthenticated ? paths.app.root.getHref() : paths.auth.login.getHref());
+  }, [isAuthenticated, router]);
+
+  return null;
 }
